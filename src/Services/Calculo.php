@@ -22,7 +22,7 @@ Class Calculo{
                 $email->send("ATENCAO! BIT COIN BATEU {$lastValue}");
                 break;
             }
-            sleep(3600);
+            sleep(1800);
         }
 
     }
