@@ -1,0 +1,20 @@
+{
+    "name": "angelo/criptobot",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Angelo\\Criptobot\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Angelo",
+            "email": "cupertinoangelo13@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "sendgrid/sendgrid": "~7",
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
