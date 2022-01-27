@@ -5,8 +5,9 @@ namespace Angelo\Criptobot\Services;
 use Exception;
 use SendGrid;
 use SendGrid\Mail\Mail;
-class SendEmail {
 
+class SendEmail
+{
     private string $key;
     private string $email;
 

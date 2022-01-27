@@ -5,8 +5,8 @@ namespace Angelo\Criptobot\Services;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
-class ApiService {
-
+class ApiService
+{
     public function __construct(
         Client $client
     )

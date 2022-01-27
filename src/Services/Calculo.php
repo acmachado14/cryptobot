@@ -6,8 +6,8 @@ use Angelo\Criptobot\Services\ApiService;
 use Angelo\Criptobot\Services\SendEmail;
 use GuzzleHttp\Client;
 
-Class Calculo{
-
+Class Calculo
+{
     public function constantVerify(): void
     {
         $api = new ApiService(new Client);
@@ -22,6 +22,7 @@ Class Calculo{
                 $email->send("ATENCAO! BIT COIN BATEU {$lastValue}");
                 break;
             }
+            echo "valor do BTC as atual: {$lastValue} \n";
             sleep(1800);
         }
 
