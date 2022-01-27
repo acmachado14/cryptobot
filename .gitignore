@@ -1,3 +1,5 @@
 /vendor
 .env
 .env.backup
+.bat
+.vbs
