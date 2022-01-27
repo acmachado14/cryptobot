@@ -16,6 +16,8 @@
         "guzzlehttp/guzzle": "^7.4",
         "sendgrid/sendgrid": "~7",
         "vlucas/phpdotenv": "^5.4",
-        "doctrine/orm": "^2.11"
+        "doctrine/orm": "^2.11",
+        "symfony/cache": "^6.0",
+        "doctrine/annotations": "^1.13"
     }
 }
