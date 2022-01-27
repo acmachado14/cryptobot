@@ -6,7 +6,7 @@ use Angelo\Criptobot\Services\ApiService;
 use Angelo\Criptobot\Services\SendEmail;
 use GuzzleHttp\Client;
 
-Class Calculo
+Class Calculate
 {
     public function constantVerify(): void
     {
