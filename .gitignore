@@ -1,5 +1,6 @@
 /vendor
 .env
 .env.backup
-.bat
-.vbs
+*.bat*
+*.vbs*
+*.sqlite*
