@@ -20,8 +20,11 @@ class EntityManagerFactory
             true // modo Desenvolvimento
         );
         $connection = [
-            'driver' => 'pdo_sqlite',
-            'path' => $rootDir . '/var/data/banco.sqlite'
+            'dbname' => 'cryptobot',
+            'user' => 'root',
+            'password' => 'cryptobot',
+            'host' => 'mysql1',
+            'driver' => 'pdo_mysql'
         ];
 
         return EntityManager::create($connection, $config);
