@@ -15,6 +15,7 @@
     "require": {
         "guzzlehttp/guzzle": "^7.4",
         "sendgrid/sendgrid": "~7",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.4",
+        "doctrine/orm": "^2.11"
     }
 }
