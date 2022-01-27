@@ -13,8 +13,8 @@ class SendEmail
 
     public function __construct()
     {
-        $this->key = $_ENV['SENDGRID_API_KEY'];
-        $this->email = $_ENV['EMAIL_API'];
+        $this->key = getenv('SENDGRID_API_KEY');
+        $this->email = getenv('EMAIL_API');
     }
 
     public function send(string $mensagem): void
