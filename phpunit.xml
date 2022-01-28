@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    colors="true"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+    cacheResult="false"
+>
+    <coverage includeUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+    <testsuites>
+        <testsuite name="u">
+        <directory>tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="DEBUG_MODE" value="1"/>
+        <env name="LOG_LEVEL" value="400" force="true"/>
+        <!-- <env name="LOG_LEVEL" value="100" force="true"/> -->
+    </php>
+</phpunit>
