@@ -1,6 +1,6 @@
 <?php
 
-namespace Angelo\Criptobot\Services;
+namespace Angelo\Criptobot\Service;
 
 use Exception;
 use SendGrid;

@@ -2,7 +2,7 @@
 
 namespace Angelo\Criptobot\Observer;
 
-use Angelo\Criptobot\Services\SendEmail;
+use Angelo\Criptobot\Service\SendEmail;
 use SplObserver;
 use SplSubject;
 

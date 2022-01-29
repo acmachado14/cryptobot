@@ -1,6 +1,6 @@
 <?php
 
-use Angelo\Criptobot\Services\Calculate;
+use Angelo\Criptobot\Service\Calculate;
 use Dotenv\Dotenv;
 
 require 'vendor/autoload.php';

@@ -5,7 +5,7 @@ namespace Test\Unit;
 use Angelo\Criptobot\Entity\Variation as EntityVariation;
 use Angelo\Criptobot\Model\Variation;
 use Angelo\Criptobot\Observer\VariationObserver;
-use Angelo\Criptobot\Services\SendEmail;
+use Angelo\Criptobot\Service\SendEmail;
 use PHPUnit\Framework\TestCase;
 
 class VariationObserverTest extends TestCase
