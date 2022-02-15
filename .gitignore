@@ -4,3 +4,4 @@
 *.bat*
 *.vbs*
 *.sqlite*
+docker-compose.yml
