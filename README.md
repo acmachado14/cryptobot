@@ -57,12 +57,16 @@ git clone https://github.com/acmachado14/cryptobot.git && cd cryptobot
 docker-compose up -d && docker exec -it cryptobot bash
 ```
 
-**4** - Install Composer dependences and run the project:
+**4** - Install Composer dependences and create the database:
 
 ```sh
-composer install && php index.php
+composer install && vendor/bin/doctrine orm:schema-tool:create
 ```
 
+**5** - Finally run the project:
+```sh
+php index.php
+```
 - - - -
 
 <h2 id="principles">
