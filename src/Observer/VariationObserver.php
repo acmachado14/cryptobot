@@ -22,6 +22,6 @@ class VariationObserver implements SplObserver
         printf(
             $this->mensagem
         );
-        //$this->sendEmail->send($this->mensagem);
+        $this->sendEmail->send($this->mensagem);
     }
 }
