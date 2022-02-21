@@ -15,10 +15,11 @@ $dotenv->load();
 $entityManagerFactory = new EntityManagerFactory();
 
 $coinController = new CoinController($entityManagerFactory->getEntityManager());
+$coins = $coinController->coins();
 
 if (sizeof($coinController->coins()) < 1){
-    $coin = new Coin('BTC');
-    $coinController->create($coin);
+    $BTC = new Coin('BTC');
+    $coinController->create($BTC);
 }
 
 $calculo = new Calculate($entityManagerFactory->getEntityManager());
