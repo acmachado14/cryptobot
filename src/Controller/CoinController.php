@@ -15,10 +15,11 @@ class CoinController
         $this->entityManager = $entityManager;
     }
 
-    public function create(Coin $coin): void
+    public function create(Coin $coin): Coin
     {
         $this->entityManager->persist($coin);
         $this->entityManager->flush($coin);
+        return $this->entityManager->getReference(Coin::class, $coin->getId());
     }
 
     public function coins(): array
@@ -26,10 +27,9 @@ class CoinController
         return $this->entityManager->getRepository(Coin::class)->findAll();
     }
 
-    public function addVariation(Coin $coin,Variation $variation): void
+    public function getCoin(int $id): Coin
     {
-        $coin = $this->entityManager->getReference(Coin::class, $coin->getId());
-        $coin->addVariation($variation);
-        $this->entityManager->flush();
+        return $this->entityManager->getReference(Coin::class, $id);
     }
+
 }
