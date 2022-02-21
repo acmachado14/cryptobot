@@ -5,7 +5,6 @@ namespace Test\Unit;
 use Angelo\Criptobot\Controller\CoinController;
 use Angelo\Criptobot\Entity\Coin;
 use Angelo\Criptobot\Helper\EntityManagerFactory;
-use Doctrine\ORM\EntityManager;
 use PHPUnit\Framework\TestCase;
 
 class CoinControllerTest extends TestCase
@@ -30,26 +29,12 @@ class CoinControllerTest extends TestCase
 
     public function testCanCreateCoin(): void
     {
-        //Act
+        //Arrange
         $coinName = "ADA";
         $coin = new Coin($coinName);
         $coinController = new CoinController(self::$entityManager);
 
-        //Arrange
-        $coin = $coinController->create($coin);
-
-        //Assert
-        $this->assertEquals($coin->getName(),$coinName);
-    }
-
-    public function testCanGetCoin(): void
-    {
         //Act
-        $coinName = "ADA";
-        $coin = new Coin($coinName);
-        $coinController = new CoinController(self::$entityManager);
-
-        //Arrange
         $coin = $coinController->create($coin);
 
         //Assert
@@ -58,13 +43,13 @@ class CoinControllerTest extends TestCase
 
     public function testCanGetCoinById(): void
     {
-        //Act
+        //Arrange
         $coinName = "ADA";
         $coin = new Coin($coinName);
         $coinController = new CoinController(self::$entityManager);
         $coin = $coinController->create($coin);
 
-        //Arrange
+        //Act
         $expectedCoin = $coinController->getCoin($coin->getId());
 
         //Assert
@@ -73,7 +58,7 @@ class CoinControllerTest extends TestCase
 
     public function testCanGetCoins(): void
     {
-        //Act
+        //Arrange
         $coin1 = new Coin("ADA");
         $coin2 = new Coin("BTC");
         $coin3 = new Coin("ETH");
@@ -84,7 +69,7 @@ class CoinControllerTest extends TestCase
         $coin2 = $coinController->create($coin2);
         $coin3 = $coinController->create($coin3);
 
-        //Arrange
+        //Act
         $expectedArray = $coinController->coins();
 
         //Assert
