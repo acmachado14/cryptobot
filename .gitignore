@@ -5,4 +5,5 @@
 *.vbs*
 *.sqlite*
 *.yml*
+*.txt*
 docker-compose.yml
