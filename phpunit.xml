@@ -12,7 +12,10 @@
     </coverage>
     <testsuites>
         <testsuite name="u">
-        <directory>tests/Unit</directory>
+            <directory>tests/Unit</directory>
+        </testsuite>
+         <testsuite name="f">
+            <directory>tests/Functional</directory>
         </testsuite>
     </testsuites>
     <php>
