@@ -17,6 +17,7 @@ $entityManagerFactory = new EntityManagerFactory();
 $coinController = new CoinController($entityManagerFactory->getEntityManager());
 $coins = $coinController->coins();
 
+//Cadastrando moedas desejadas
 if (sizeof($coinController->coins()) < 1){
     $BTC = new Coin('BTC');
     $coinController->create($BTC);
