@@ -27,20 +27,23 @@ class Variation
     private DateTime $date;
 
     /**
-     * @ManyToOne(targetEntity="Coin")
-     */
-
+     * @ManyToOne(targetEntity="Coin", cascade={"persist"})
+    */
     protected $coin;
+
+    public function __construct(
+        Coin $coin,
+        float $value,
+        DateTime $date
+    ) {
+        $this->coin = $coin;
+        $this->value = $value;
+        $this->date = $date;
+    }
 
     public function getId(): int
     {
         return $this->id;
-    }
-
-    public function setId($id): self
-    {
-        $this->id = $id;
-        return $this;
     }
 
     public function getValue(): float
@@ -48,19 +51,9 @@ class Variation
         return $this->value;
     }
 
-    public function setValue(float $value): void
-    {
-        $this->value = $value;
-    }
-
     public function getDate(): DateTime
     {
         return $this->date;
-    }
-
-    public function setDate(DateTime $date): void
-    {
-        $this->date = $date;
     }
 }
 
