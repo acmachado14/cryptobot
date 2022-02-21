@@ -20,7 +20,7 @@ class SendEmail
     public function send(string $mensagem): void
     {
         $email = new Mail();
-        $email->setFrom($this->email, "Bitcoin");
+        $email->setFrom($this->email, "Cryptobot Mensage");
         $email->setSubject("SOBRE SEU DINHEIRO!!");
         $email->addTo($this->email, "Angelo");
         $email->addContent(

@@ -29,10 +29,10 @@ Class Calculate
         while (true) {
             foreach ($coins as $coin){
                 $lastValue = round($api->get($coin->getName())['last'], 2);
+                echo "\n valor do {$coin->getName()} as atual: {$lastValue} ";
                 $variation = new Variation($coin,$lastValue, new DateTime());
                 $variationController->create($variation);
                 new VariationHandler($variation);
-                echo "valor do BTC as atual: {$lastValue} \n";
             }
             sleep(1800);
         }
