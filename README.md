@@ -11,7 +11,7 @@
     Description
 </h2>
 
-Aplication to notify user about cryptocoins developed using [PHP 8.0](https://www.php.net/) and Observer Pattern
+Aplication to consult and notify user about cryptocoins variations
 - - -
 
 <h2 id="prerequisites">
