@@ -1,6 +1,7 @@
 {
     "name": "angelo/criptobot",
     "type": "project",
+    "description": "Pacote para consulta e notificacao sobre crypto moedas",
     "autoload": {
         "psr-4": {
             "Angelo\\Criptobot\\": "src"
