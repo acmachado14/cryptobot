@@ -1,0 +1,46 @@
+version: "3.1"
+
+volumes:
+    cryptobot-data-1:
+        driver: local
+
+services:
+    mysql1:
+        image: mysql:5.7
+        container_name: cryptobot-sql-1
+        environment:
+            - MYSQL_DATABASE=cryptobot
+            - MYSQL_USER=cryptobot
+            - MYSQL_PASSWORD=cryptobot
+            - MYSQL_ROOT_PASSWORD=cryptobot
+            - TZ=America/Sao_Paulo
+        volumes:
+            - cryptobot-data-1:/var/lib/mysql
+
+    php-nginx:
+        image: marciodojr/php-fpm:80-dev-nginx
+        container_name: cryptobot
+        environment:
+            - APP_NAME=AppLog
+            # Email
+            - EMAIL_API=
+            - SENDGRID_API_KEY=
+            # DB
+            - DB_HOST=mysql1
+            - DB_PORT=3306
+            # DB Api Hub
+            - DB_NAME=cryptobot
+            - DB_NAME_LOG=cryptobot
+            - DB_USER=root
+            - DB_PASS=cryptobot
+            # URL
+            - APP_URL=http://localhost:8886
+            - COMPOSER_AUTH=${COMPOSER_AUTH}
+        volumes:
+            - .:/var/www/app
+            - ./xdebug.ini:/etc/php/8.0/fpm/conf.d/26-xdebug.ini
+            - ./xdebug.ini:/etc/php/8.0/cli/conf.d/26-xdebug.ini
+        ports:
+            - 8082:8080
+        depends_on:
+            - mysql1
